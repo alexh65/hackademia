@@ -94,7 +94,7 @@ function calculate(){
         } else {
             return 'aquarius'
         }
-    } else if (month == 'Febuary') {
+    } else if (month == 'February') {
         if (day < 19) {
             return 'aquarius'
         } else {

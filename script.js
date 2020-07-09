@@ -11,94 +11,111 @@ function load(){
     }
     document.getElementById('months').innerHTML = monthOptions;
     document.getElementById('days').innerHTML = dayOptions;
-    
-    const theForm = document.getElementById('theForm')
+
+    const theForm = document.getElementById('theForm');
     theForm.addEventListener("submit", (e) => {
         e.preventDefault()
         const sign = calculate()
         document.getElementById('result').style.display = 'inline'
         document.getElementById('result_title').innerHTML = 'Your sign is ' + sign
+
+        var img = document.createElement("img");
+        let imgsrc = "img/" + sign + ".jpg";
+        img.src = imgsrc;
+        let src = document.getElementById("constellation");
+        console.log(src);
+        if (src.children.length > 0) {
+          // It has at least one
+          console.log("HELLOO");
+          console.log(src.children[0]);
+          src.removeChild(src.children[0]);
+          src.appendChild(img);
+
+        }
+        else {
+          src.appendChild(img);
+        }
     })
 }
 
 function calculate(){
     const months = document.getElementById('months')
     const month = months.options[months.selectedIndex].text
-    
+
     const days = document.getElementById('days')
     const day = days.options[days.selectedIndex].text
-    
+
     if (month == 'March') {
         if (day < 21) {
-            return 'pisces'
+            return 'Pisces'
         } else {
-            return 'aries'
+            return 'Aries'
         }
     } else if (month == 'April') {
         if (day < 20) {
-            return 'aries'
+            return 'Aries'
         } else {
-            return 'taurus'
+            return 'Taurus'
         }
     } else if (month == 'May') {
         if (day < 21) {
-            return 'taurus'
+            return 'Taurus'
         } else {
-            return 'gemini'
+            return 'Gemini'
         }
     } else if (month == 'June') {
         if (day < 21) {
-            return 'gemini'
+            return 'Gemini'
         } else {
-            return 'cancer'
+            return 'Cancer'
         }
     } else if (month == 'July') {
         if (day < 23) {
-            return 'cancer'
+            return 'Cancer'
         } else {
-            return 'leo'
+            return 'Leo'
         }
     } else if (month == 'August') {
         if (day < 23) {
-            return 'leo'
+            return 'Leo'
         } else {
-            return 'virgo'
+            return 'Virgo'
         }
     } else if (month == 'September') {
         if (day < 23) {
-            return 'virgo'
+            return 'Virgo'
         } else {
-            return 'libra'
+            return 'Libra'
         }
     } else if (month == 'October') {
         if (day < 23) {
-            return 'libra'
+            return 'Libra'
         } else {
-            return 'scorpio'
+            return 'Scorpio'
         }
     } else if (month == 'November') {
         if (day < 22) {
-            return 'scorpio'
+            return 'Scorpio'
         } else {
-            return 'sagittarius'
+            return 'Sagittarius'
         }
     } else if (month == 'December') {
         if (day < 22) {
-            return 'sagitarrius'
+            return 'Sagittarius'
         } else {
-            return 'capricorn'
+            return 'Capricorn'
         }
     } else if (month == 'January') {
         if (day < 20) {
-            return 'capricorn'
+            return 'Capricorn'
         } else {
-            return 'aquarius'
+            return 'Aquarius'
         }
     } else if (month == 'February') {
         if (day < 19) {
-            return 'aquarius'
+            return 'Aquarius'
         } else {
-            return 'pisces'
+            return 'Pisces'
         }
     }
 }

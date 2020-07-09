@@ -26,8 +26,6 @@ function load(){
         console.log(src);
         if (src.children.length > 0) {
           // It has at least one
-          console.log("HELLOO");
-          console.log(src.children[0]);
           src.removeChild(src.children[0]);
           src.appendChild(img);
 

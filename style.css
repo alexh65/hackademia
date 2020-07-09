@@ -58,3 +58,18 @@ label{
 .result{
     display: none;
 }
+
+#result_title {
+  font-size: 4vw;
+  padding: 17px;
+}
+
+#constellation {
+  float: left;
+  margin-left: 20px;
+}
+
+#information {
+    text-align: left;
+    float: right;
+}

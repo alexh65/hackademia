@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Solar Sign</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="script.js"></script>
     </head>
-    <body onload="monthAndDay()">
+    <body onload="load()">
         <h1>Solar Sign</h1>
         <h2>Find your sign... </h2>
-        <form action="/process.php">
+        <form id="theForm">
             <label for="months">Month: </label>
             <select name="months" id="months">
             </select>
@@ -16,5 +17,9 @@
             </select>
             <input type="submit" value="Find" class="submit">
         </form>
+        
+        <div id='result'>
+            <h4 class='result_title'></h4>
+        </div>
     </body>
 </html>

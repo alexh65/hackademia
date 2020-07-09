@@ -49,9 +49,12 @@ label{
     background-color: transparent;
     color: white;
     border-radius: 5px;
-    animation: glowing 5000ms infinite;
 }
 
 .submit:hover{
-    background-color: black;
+    animation: glowing 4000ms infinite;
+}
+
+.result{
+    display: none;
 }

@@ -2,6 +2,14 @@
     font-family: cinzel;
     src: url(./resource/Cinzel-Regular.otf)
 }
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 -2px #950D4B; }
+  40% { box-shadow: 0 0 15px #C7407D; }
+  60% { box-shadow: 0 0 25px #950D4B; }
+  100% { box-shadow: 0 0 -10px #C7407D; }
+}
+
 body {
     background-color: #101B26;
     background: url("resource/twinkle-light.gif");
@@ -32,4 +40,18 @@ select {
 
 label{
     margin: 5px;
+}
+
+.submit{
+    padding: 10px;
+    border-color: white;
+    border-width: thin;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    animation: glowing 5000ms infinite;
+}
+
+.submit:hover{
+    background-color: black;
 }

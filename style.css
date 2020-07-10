@@ -64,12 +64,13 @@ label{
   padding: 17px;
 }
 
-#constellation {
+img {
   float: left;
+  width: 45vw;
   margin-left: 20px;
 }
 
 #information {
-    text-align: left;
-    float: right;
+	text-align: left;
+	float: right;
 }

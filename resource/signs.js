@@ -1,0 +1,98 @@
+const signs = {
+  "capricorn":  {
+    "element" : "earth: practical and grounded",
+    "qualities" : "cardinal: take action and start initiatives",
+    "ruler" : "Saturn",
+    "representation" : "The Goat",
+    "perfect match" : "Virgo",
+    "imperfect match" : "Gemini"
+  },
+  "aquarius":  {
+    "element" : "air: intellectual and curious",
+    "qualities" : "fixed: steady, consistent forces that maintain movement",
+    "ruler" : "Uranus",
+    "representation" : "The Water Bearer",
+    "perfect match" : "Sagittarius",
+    "imperfect match" : "Cancer"
+  },
+  "pisces":  {
+    "element" : "water: intuitive and emotional",
+    "qualities" : "mutable: well-suited to change and transformation",
+    "ruler" : "Neptune",
+    "representation" : "The Fish",
+    "perfect match" : "Scorpio",
+    "imperfect match" : "Virgo"
+  },
+  "aries":  {
+    "element" : "fire: passionate and exuberant",
+    "qualities" : "cardinal: take action and start initiatives",
+    "ruler" : "Mars",
+    "representation" : "The Ram",
+    "perfect match" : "Libra",
+    "imperfect match" : "Taurus"
+  },
+  "taurus":  {
+    "element" : "earth: practical and grounded",
+    "qualities" : "fixed: steady, consistent forces that maintain movement",
+    "ruler" : "Venus",
+    "representation" : "The Bull",
+    "perfect match" : "Scorpio",
+    "imperfect match" : "Sagittarius"
+  },
+  "gemini":  {
+    "element" : "air: intellectual and curious",
+    "qualities" : "mutable: well-suited to change and transformation",
+    "ruler" : "Mercury",
+    "representation" : "The Twins",
+    "perfect match" : "Sagittarius",
+    "imperfect match" : "Capricorn"
+  },
+  "cancer":  {
+    "element" : "water: intuitive and emotional",
+    "qualities" : "cardinal: take action and start initiatives",
+    "ruler" : "The Moon",
+    "representation" : "The Crab",
+    "perfect match" : "Taurus",
+    "imperfect match" : "Aquarius"
+  },
+  "leo":  {
+    "element" : "fire: passionate and exuberant",
+    "qualities" : "fixed: steady, consistent forces that maintain movement",
+    "ruler" : "The Sun",
+    "representation" : "The Lion",
+    "perfect match" : "Sagittarius",
+    "imperfect match" : "Scorpio"
+  },
+  "virgo":  {
+    "element" : "earth: practical and grounded",
+    "qualities" : "mutable: well-suited to change and transformation",
+    "ruler" : "Mercury",
+    "representation" : "The Virgin",
+    "perfect match" : "Scorpio",
+    "imperfect match" : "Sagittarius"
+  },
+  "libra":  {
+    "element" : "air: intellectual and curious",
+    "qualities" : "cardinal: take action and start initiatives",
+    "ruler" : "Venus",
+    "representation" : "The Scales",
+    "perfect match" : "Libra",
+    "imperfect match" : "Virgo"
+  },
+  "scorpio":  {
+    "element" : "water: intuitive and emotional",
+    "qualities" : "fixed: steady, consistent forces that maintain movement",
+    "ruler" : "Pluto",
+    "representation" : "The Scorpion",
+    "perfect match" : "Pisces",
+    "imperfect match" : "Aries"
+  },
+  "sagittarius":  {
+    "element" : "fire: passionate and exuberant",
+    "qualities" : "mutable: well-suited to change and transformation",
+    "ruler" : "Jupiter",
+    "representation" : "The Archer",
+    "perfect match" : "Aquarius",
+    "imperfect match" : "Taurus"
+  }
+}

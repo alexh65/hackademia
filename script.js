@@ -11,14 +11,13 @@ function load(){
     }
     document.getElementById('months').innerHTML = monthOptions;
     document.getElementById('days').innerHTML = dayOptions;
-	
     const theForm = document.getElementById('theForm')
     theForm.addEventListener("submit", (e) => {
         e.preventDefault()
         const sign = calculate()
         document.getElementById('result').style.display = 'inline'
         document.getElementById('result_title').innerHTML = 'Your sign is ' + sign
-			
+
         var img = document.createElement("img");
         let imgsrc = "img/" + sign + ".svg";
         img.src = imgsrc;
@@ -130,6 +129,7 @@ function showInformation(sign) {
     document.getElementById('Representation').innerHTML = 'Representation: ' + signs[lowercase_sign].representation
     document.getElementById('Perfect Match').innerHTML = 'Perfect Match: ' + signs[lowercase_sign]["perfect match"]
     document.getElementById('Imperfect Match').innerHTML = 'Imperfect Match: ' + signs[lowercase_sign]["imperfect match"]
-    
-  }
+    document.getElementById('Professional').innerHTML = 'Professional traits: ' + signs[lowercase_sign].professional
+    document.getElementById('Career Path').innerHTML = 'Ideal Careers: ' + signs[lowercase_sign]["career path"]
 
+  }

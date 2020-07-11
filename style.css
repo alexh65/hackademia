@@ -64,17 +64,21 @@ label{
 	margin: 20px;
 	margin-top: 30px;
 }
+
 #info {
 	width: 85%;
 	margin: auto;
 }
+
 #information{
 	text-align: left;
 	position: relative;
-	top: -28vh;
+	top: -40vh;
 	float: right;
-	font-size: 1.8vw;
+	font-size: 1.5vw;
+  width: 60%;
 }
+
 #constellation{
 	width: 50%;
 }

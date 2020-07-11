@@ -1,5 +1,3 @@
-// the json file (will load later)
-var signs
 function load(){
     var monthOptions = "";
     var dayOptions = "";
@@ -13,9 +11,7 @@ function load(){
     }
     document.getElementById('months').innerHTML = monthOptions;
     document.getElementById('days').innerHTML = dayOptions;
-    
-    loadJSON('resource/signs.json')
-    const theForm = document.getElementById('theForm');
+    const theForm = document.getElementById('theForm')
     theForm.addEventListener("submit", (e) => {
         e.preventDefault()
         const sign = calculate()
@@ -23,7 +19,7 @@ function load(){
         document.getElementById('result_title').innerHTML = 'Your sign is ' + sign
 
         var img = document.createElement("img");
-        let imgsrc = "img/" + sign + ".jpg";
+        let imgsrc = "img/" + sign + ".svg";
         img.src = imgsrc;
         let src = document.getElementById("constellation");
         console.log(src);
@@ -38,6 +34,7 @@ function load(){
         }
 
         showInformation(sign);
+				
     })
 }
 
@@ -125,17 +122,14 @@ function calculate(){
 
 function showInformation(sign) {
     lowercase_sign = sign.toLowerCase()
+		console.log(signs[lowercase_sign])
     document.getElementById('Element').innerHTML = 'Element: ' + signs[lowercase_sign].element
     document.getElementById('Qualities').innerHTML = 'Qualities: ' + signs[lowercase_sign].qualities
     document.getElementById('Ruler').innerHTML = 'Ruler: ' + signs[lowercase_sign].ruler
     document.getElementById('Representation').innerHTML = 'Representation: ' + signs[lowercase_sign].representation
     document.getElementById('Perfect Match').innerHTML = 'Perfect Match: ' + signs[lowercase_sign]["perfect match"]
     document.getElementById('Imperfect Match').innerHTML = 'Imperfect Match: ' + signs[lowercase_sign]["imperfect match"]
-    
-  }
+    document.getElementById('Professional').innerHTML = 'Professional traits: ' + signs[lowercase_sign].professional
+    document.getElementById('Career Path').innerHTML = 'Ideal Careers: ' + signs[lowercase_sign]["career path"]
 
-async function loadJSON(path) {
-    // using Promise
-    let response = await fetch(path);
-    signs = await response.json();
-}
+  }

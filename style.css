@@ -56,20 +56,29 @@ label{
 }
 
 .result{
-    display: none;
+	display: none;
 }
 
 #result_title {
-  font-size: 4vw;
-  padding: 17px;
+  font-size: 3.5vw;
+	margin: 20px;
+	margin-top: 30px;
 }
 
-#constellation {
-  float: left;
-  margin-left: 20px;
+#info {
+	width: 85%;
+	margin: auto;
 }
 
-#information {
-    text-align: left;
-    float: right;
+#information{
+	text-align: left;
+	position: relative;
+	top: -40vh;
+	float: right;
+	font-size: 1.5vw;
+  width: 60%;
+}
+
+#constellation{
+	width: 50%;
 }

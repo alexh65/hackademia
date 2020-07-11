@@ -3,8 +3,9 @@
     <head>
         <title>Solar Sign</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="resource/signs.js"></script>
     </head>
     <body onload="load();">
         <h1>Solar Sign</h1>
@@ -22,14 +23,18 @@
 
         <div id='result'>
             <h4 id='result_title'></h4>
-            <div id='constellation'></div>
-            <div id='information'>
-                <h3 id='Element'></h3>
-                <h3 id='Qualities'></h3>
-                <h3 id='Ruler'></h3>
-                <h3 id='Representation'></h3>
-                <h3 id='Perfect Match'></h3>
-                <h3 id='Imperfect Match'></h3>
+            <div id="info">
+            	<div id='constellation'></div>
+							<div id='information'>
+									<h3 id='Element'></h3>
+									<h3 id='Qualities'></h3>
+									<h3 id='Ruler'></h3>
+									<h3 id='Representation'></h3>
+									<h3 id='Perfect Match'></h3>
+									<h3 id='Imperfect Match'></h3>
+                  <h3 id='Professional'></h3>
+                  <h3 id='Career Path'></h3>
+							</div>
             </div>
         </div>
 

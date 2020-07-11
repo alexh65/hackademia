@@ -67,10 +67,13 @@ label{
 img {
   float: left;
   width: 45vw;
-  margin-left: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
 }
 
 #information {
 	text-align: left;
 	float: right;
+  width: 45vw;
+  margin-right: 30px;
 }

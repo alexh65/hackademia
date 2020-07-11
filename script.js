@@ -11,8 +11,7 @@ function load(){
     }
     document.getElementById('months').innerHTML = monthOptions;
     document.getElementById('days').innerHTML = dayOptions;
-
-    const theForm = document.getElementById('theForm');
+    const theForm = document.getElementById('theForm')
     theForm.addEventListener("submit", (e) => {
         e.preventDefault()
         const sign = calculate()
@@ -35,6 +34,7 @@ function load(){
         }
 
         showInformation(sign);
+				
     })
 }
 

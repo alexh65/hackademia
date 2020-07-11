@@ -60,8 +60,9 @@ label{
 }
 
 #result_title {
-  font-size: 4vw;
-  padding: 10px;
+  font-size: 3.5vw;
+	margin: 20px;
+	margin-top: 30px;
 }
 #info {
 	width: 85%;
@@ -70,10 +71,10 @@ label{
 #information{
 	text-align: left;
 	position: relative;
-	top: -16vh;
+	top: -28vh;
 	float: right;
 	font-size: 1.8vw;
 }
 #constellation{
-	width: 65%;
+	width: 50%;
 }

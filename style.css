@@ -56,21 +56,24 @@ label{
 }
 
 .result{
-    display: none;
+	display: none;
 }
 
 #result_title {
   font-size: 4vw;
-  padding: 17px;
+  padding: 10px;
 }
-
-img {
-  float: left;
-  width: 45vw;
-  margin-left: 20px;
+#info {
+	width: 85%;
+	margin: auto;
 }
-
-#information {
+#information{
 	text-align: left;
+	position: relative;
+	top: -16vh;
 	float: right;
+	font-size: 1.8vw;
+}
+#constellation{
+	width: 65%;
 }

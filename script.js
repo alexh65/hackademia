@@ -15,7 +15,7 @@ function load(){
     theForm.addEventListener("submit", (e) => {
         e.preventDefault()
         const sign = calculate()
-        document.getElementById('result').style.display = 'inline'
+        document.getElementById('result').style.display = 'block'
         document.getElementById('result_title').innerHTML = 'Your sign is ' + sign
 
         var img = document.createElement("img");

@@ -133,3 +133,4 @@ function showInformation(sign) {
     document.getElementById('Career Path').innerHTML = 'Ideal Careers: ' + signs[lowercase_sign]["career path"]
 
   }
+}

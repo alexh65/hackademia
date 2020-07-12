@@ -83,10 +83,3 @@ label{
 	width: 50%;
 }
 
-body {
-    font-family: "bookman old style";
-}
-:target {
-    color: lightyellow;
-    background: indianred;
-}

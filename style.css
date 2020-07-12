@@ -148,12 +148,13 @@ label{
   top: 15px;
   right: 35px;
   }
+}
 
 #mars-photos {
   display: flex;
   flex-direction: row;
 }
 
-#mars-photo img {
-  width: 50%;
+#mars-photos img {
+  width: 40%;
 }

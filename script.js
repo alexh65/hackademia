@@ -33,7 +33,7 @@ function load(){
           src.appendChild(img);
         }
 
-        showInformation(sign);
+        showInformation(sign.toLowerCase(), 'Element', 'Qualities', 'Ruler', 'Representation', 'Perfect Match', 'Imperfect Match', 'Professional', 'Career Path')
 				
     })
 }
@@ -120,31 +120,23 @@ function calculate(){
     }
 }
 
-function showInformation(sign) {
-    lowercase_sign = sign.toLowerCase()
-		console.log(signs[lowercase_sign])
-    document.getElementById('Element').innerHTML = 'Element: ' + signs[lowercase_sign].element
-    document.getElementById('Qualities').innerHTML = 'Qualities: ' + signs[lowercase_sign].qualities
-    document.getElementById('Ruler').innerHTML = 'Ruler: ' + signs[lowercase_sign].ruler
-    document.getElementById('Representation').innerHTML = 'Representation: ' + signs[lowercase_sign].representation
-    document.getElementById('Perfect Match').innerHTML = 'Perfect Match: ' + signs[lowercase_sign]["perfect match"]
-    document.getElementById('Imperfect Match').innerHTML = 'Imperfect Match: ' + signs[lowercase_sign]["imperfect match"]
-    document.getElementById('Professional').innerHTML = 'Professional traits: ' + signs[lowercase_sign].professional
-    document.getElementById('Career Path').innerHTML = 'Ideal Careers: ' + signs[lowercase_sign]["career path"]
+function showInformation(sign, el, qual, ruler, repr, perf, imperf, prof, career) {
+    document.getElementById(el).innerHTML = 'Element: ' + signs[sign].element
+    document.getElementById(qual).innerHTML = 'Qualities: ' + signs[sign].qualities
+    document.getElementById(ruler).innerHTML = 'Ruler: ' + signs[sign].ruler
+    document.getElementById(repr).innerHTML = 'Representation: ' + signs[sign].representation
+    document.getElementById(perf).innerHTML = 'Perfect Match: ' + signs[sign]["perfect match"]
+    document.getElementById(imperf).innerHTML = 'Imperfect Match: ' + signs[sign]["imperfect match"]
+    document.getElementById(prof).innerHTML = 'Professional traits: ' + signs[sign].professional
+    document.getElementById(career).innerHTML = 'Ideal Careers: ' + signs[sign]["career path"]
 
   }
 
-function popup(planet){
+function popup(planet, sign){
 	document.getElementById("overlay").style.height = "100%"
-	
-	document.getElementById('element').innerHTML = 'Element: '
-	document.getElementById('qualities').innerHTML = 'Qualities: ' 
-	document.getElementById('ruler').innerHTML = 'Ruler: ' 
-	document.getElementById('representation').innerHTML = 'Representation: '
-	document.getElementById('perfect_match').innerHTML = 'Perfect Match: '
-	document.getElementById('imperfect_match').innerHTML = 'Imperfect Match: ' 
-	document.getElementById('professional').innerHTML = 'Professional traits: ' 
-	document.getElementById('career_path').innerHTML = 'Ideal Careers: ' 
+	document.getElementById('planet-sign').innerHTML = ''+ planet + ' - ' + sign
+	showInformation(sign, 'element', 'qualities', 'ruler', 'representation', 'perfect_match', 'imperfect_match', 'professional', 'career_path')	
+	document.getElementById('ruler').innerHTML =''
 }
 
 function closePopup() {

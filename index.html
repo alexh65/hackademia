@@ -41,38 +41,30 @@
        	<div id="solar-system">
 							<h3>Click on the sun or a planet in the image!</h3>
 							<map name="solar_system">
-									<area shape="circle" coords="-200,193,250" alt="Sun" href="#sun" onclick="popup('sun')">
-									<area shape="circle" coords="71,194,12" alt="Mercury" href="#mercury">
-									<area shape="circle" coords="120,193,21" alt="Venus" href="#venus">
-									<area shape="circle" coords="176,195,23" alt="Earth" href="#earth">
-									<area shape="circle" coords="221,193,12" alt="Mars" href="#mars">
-									<area shape="circle" coords="314,198,69" alt="Jupiter" href="#jupiter">
-									<area shape="circle" coords="454,198,56" alt="Saturn" href="#saturn">
-									<area shape="circle" coords="560,194,37" alt="Uranus" href="#uranus">
-									<area shape="circle" coords="647,198,36" alt="Neptune" href="#neptune">
+									<area shape="circle" coords="-200,193,250" alt="Sun" href="#sun" onclick="popup('sun', 'leo')">
+									<area shape="circle" coords="71,194,12" alt="Mercury" href="#mercury" onclick="popup('mercury', 'virgo')">
+									<area shape="circle" coords="120,193,21" alt="Venus" href="#venus" onclick="popup('venus', 'libra')">
+									<area shape="circle" coords="176,195,23" alt="Earth" href="#earth" onclick="popup('earth', 'capricorn')">
+									<area shape="circle" coords="221,193,12" alt="Mars" href="#mars" onclick="popup('mars', 'aries')">
+									<area shape="circle" coords="314,198,69" alt="Jupiter" href="#jupiter" onclick="popup('jupiter', 'sagittarius')">
+									<area shape="circle" coords="454,198,56" alt="Saturn" href="#saturn" onclick="popup('saturn', 'capricorn')">
+									<area shape="circle" coords="560,194,37" alt="Uranus" href="#uranus" onclick="popup('uranus', 'aquarius')">
+									<area shape="circle" coords="647,198,36" alt="Neptune" href="#neptune" onclick="popup('neptune', 'pisces')">
 							</map>
 									<img usemap="#solar_system" src="img/solar.jpg"/>
-						<h3 id="sun">Sun - Leo</h3>
-						<h3 id="mercury">Mercury - Virgo</h3>
-						<h3 id="venus">Venus - Libra</h3>
-						<h3 id="earth">Earth - Capricorn</h3>
-						<h3 id="mars">Mars - Aries</h3>
-						<h3 id="jupiter">Jupiter - Sagittarius</h3>
-						<h3 id="saturn">Saturn - Capricorn</h3>
-						<h3 id="uranus">Uranus - Aquarius</h3>
-						<h3 id="neptune">Neptune - Pisces</h3>
        	</div> 
        	<div id='overlay' class='overlay'>
        		<a href="javascript:void(0)" class="closebtn" onclick="closePopup()">&times;</a>
        		<div class='overlay-content'>
+       			<h2 id='planet-sign'></h2>
        			<h3 id='element'></h3>
 						<h3 id='qualities'></h3>
-						<h3 id='ruler'></h3>
 						<h3 id='representation'></h3>
 						<h3 id='perfect_match'></h3>
 						<h3 id='imperfect_match'></h3>
 						<h3 id='professional'></h3>
 						<h3 id='career_path'></h3>
+						<h3 id='ruler'></h3>
        		</div>
        	</div>
     </body>

@@ -34,7 +34,8 @@ function load(){
         }
 
         showInformation(sign.toLowerCase(), 'Element', 'Qualities', 'Ruler', 'Representation', 'Perfect Match', 'Imperfect Match', 'Professional', 'Career Path')
-				
+        marsLatestPhoto();
+        marsBirthdayPhoto();
     })
 }
 
@@ -135,10 +136,48 @@ function showInformation(sign, el, qual, ruler, repr, perf, imperf, prof, career
 function popup(planet, sign){
 	document.getElementById("overlay").style.height = "100%"
 	document.getElementById('planet-sign').innerHTML = ''+ planet + ' - ' + sign
-	showInformation(sign, 'element', 'qualities', 'ruler', 'representation', 'perfect_match', 'imperfect_match', 'professional', 'career_path')	
+	showInformation(sign, 'element', 'qualities', 'ruler', 'representation', 'perfect_match', 'imperfect_match', 'professional', 'career_path')
 	document.getElementById('ruler').innerHTML =''
 }
 
 function closePopup() {
 	document.getElementById("overlay").style.height = "0%"
+}
+
+function marsLatestPhoto() {
+  // Create a request variable and assign a new XMLHttpRequest object to it.
+  var request = new XMLHttpRequest()
+  // Open a new connection, using the GET request on the URL endpoint
+  request.open('GET', 'https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/latest_photos', true)
+  request.onload = function () {
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response);
+    console.log(data);
+    document.getElementById("mars-latest-photo").src = data.latest_photos[0].img_src;
+  }
+  request.send();
+}
+
+function marsBirthdayPhoto() {
+  var request = new XMLHttpRequest()
+
+  const months = document.getElementById('months')
+  console.log(months.options[months.selectedIndex])
+  const month = parseInt(months.selectedIndex) + 1
+
+  const days = document.getElementById('days')
+  const day = parseInt(days.selectedIndex) + 1
+
+  var birthday = (new Date().getFullYear()-1) + '-' + month + "-" + day;
+  console.log(birthday);
+  var link = 'https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/photos?earth_date=' + birthday;
+
+  request.open('GET', link, true)
+  request.onload = function () {
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response);
+    console.log(data.photos[0]);
+    document.getElementById("mars-birthday-photo").src = data.photos[0].img_src;
+  }
+  request.send();
 }

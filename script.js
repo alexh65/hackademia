@@ -133,3 +133,20 @@ function showInformation(sign) {
     document.getElementById('Career Path').innerHTML = 'Ideal Careers: ' + signs[lowercase_sign]["career path"]
 
   }
+
+function popup(planet){
+	document.getElementById("overlay").style.height = "100%"
+	
+	document.getElementById('element').innerHTML = 'Element: '
+	document.getElementById('qualities').innerHTML = 'Qualities: ' 
+	document.getElementById('ruler').innerHTML = 'Ruler: ' 
+	document.getElementById('representation').innerHTML = 'Representation: '
+	document.getElementById('perfect_match').innerHTML = 'Perfect Match: '
+	document.getElementById('imperfect_match').innerHTML = 'Imperfect Match: ' 
+	document.getElementById('professional').innerHTML = 'Professional traits: ' 
+	document.getElementById('career_path').innerHTML = 'Ideal Careers: ' 
+}
+
+function closePopup() {
+	document.getElementById("overlay").style.height = "0%"
+}

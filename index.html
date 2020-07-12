@@ -38,10 +38,10 @@
             </div>
         </div>
        	
-            <div id="solar-system">
+       	<div id="solar-system">
 							<h3>Click on the sun or a planet in the image!</h3>
 							<map name="solar_system">
-									<area shape="circle" coords="-200,193,250" alt="Sun" href="#sun">
+									<area shape="circle" coords="-200,193,250" alt="Sun" href="#sun" onclick="popup('sun')">
 									<area shape="circle" coords="71,194,12" alt="Mercury" href="#mercury">
 									<area shape="circle" coords="120,193,21" alt="Venus" href="#venus">
 									<area shape="circle" coords="176,195,23" alt="Earth" href="#earth">
@@ -61,6 +61,19 @@
 						<h3 id="saturn">Saturn - Capricorn</h3>
 						<h3 id="uranus">Uranus - Aquarius</h3>
 						<h3 id="neptune">Neptune - Pisces</h3>
+       	</div> 
+       	<div id='overlay' class='overlay'>
+       		<a href="javascript:void(0)" class="closebtn" onclick="closePopup()">&times;</a>
+       		<div class='overlay-content'>
+       			<h3 id='element'></h3>
+						<h3 id='qualities'></h3>
+						<h3 id='ruler'></h3>
+						<h3 id='representation'></h3>
+						<h3 id='perfect_match'></h3>
+						<h3 id='imperfect_match'></h3>
+						<h3 id='professional'></h3>
+						<h3 id='career_path'></h3>
+       		</div>
        	</div>
     </body>
 

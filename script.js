@@ -1,4 +1,5 @@
 function load(){
+		// To initialize the select dropdown menu
     var monthOptions = "";
     var dayOptions = "";
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -11,6 +12,10 @@ function load(){
     }
     document.getElementById('months').innerHTML = monthOptions;
     document.getElementById('days').innerHTML = dayOptions;
+		
+		// Stop the page from scrolling to the bottom 
+		scrollUp()
+		//Set up the form submission 
     const theForm = document.getElementById('theForm')
     theForm.addEventListener("submit", (e) => {
         e.preventDefault()
@@ -180,4 +185,8 @@ function getBirthday(){
   const day = parseInt(days.selectedIndex) + 1
 
   return (new Date().getFullYear()-1) + '-' + month + "-" + day;
+}
+
+function scrollUp(){
+		window.scrollTo(0, 0)
 }

@@ -53,7 +53,8 @@ label{
 }
 
 .submit:hover{
-    animation: glowing 4000ms infinite;
+  animation: glowing 4000ms infinite;
+	cursor: pointer;
 }
 
 #result{
@@ -189,4 +190,22 @@ label{
 		width: 80%;
 		margin: auto;
 	}
+}
+
+#scrollUp{
+	position:fixed;
+	bottom: 0;
+	right: 0;
+	background-color: #C7407D;
+	padding: 5px 14px 5px 14px;
+	margin: 10px;
+	border-radius: 5px;
+	font-size: 2vw;
+	color: white;
+	transition: 0.7s;
+}
+#scrollUp:hover{
+	background-color: #8F0E49;
+	padding: 7px 16px 7px 16px;
+	cursor: pointer;
 }

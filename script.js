@@ -152,7 +152,7 @@ function marsLatestPhoto() {
   request.onload = function () {
     // Begin accessing JSON data here
     var data = JSON.parse(this.response);
-    console.log(data);
+//    console.log(data);
     document.getElementById("mars-latest-photo").src = data.latest_photos[0].img_src;
   }
   request.send();
@@ -160,24 +160,24 @@ function marsLatestPhoto() {
 
 function marsBirthdayPhoto() {
   var request = new XMLHttpRequest()
-
-  const months = document.getElementById('months')
-  console.log(months.options[months.selectedIndex])
-  const month = parseInt(months.selectedIndex) + 1
-
-  const days = document.getElementById('days')
-  const day = parseInt(days.selectedIndex) + 1
-
-  var birthday = (new Date().getFullYear()-1) + '-' + month + "-" + day;
-  console.log(birthday);
-  var link = 'https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/photos?earth_date=' + birthday;
+  var link = 'https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/photos?earth_date=' + getBirthday();
 
   request.open('GET', link, true)
   request.onload = function () {
     // Begin accessing JSON data here
     var data = JSON.parse(this.response);
-    console.log(data.photos[0]);
+    //console.log(data.photos[0]);
     document.getElementById("mars-birthday-photo").src = data.photos[0].img_src;
   }
   request.send();
+}
+
+function getBirthday(){
+	const months = document.getElementById('months')
+  const month = parseInt(months.selectedIndex) + 1
+
+  const days = document.getElementById('days')
+  const day = parseInt(days.selectedIndex) + 1
+
+  return (new Date().getFullYear()-1) + '-' + month + "-" + day;
 }

@@ -151,10 +151,42 @@ label{
 }
 
 #mars-photos {
+	position: relative;
+	top: -20vh;
   display: flex;
   flex-direction: row;
+	flex-wrap: wrap;
+	width: 85%;
+	margin: auto;
+	font-size: 3vw;
+}
+.photo-container {
+	width: 400px;
+	margin: auto;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.photo-container img{
+	width: 280px;
 }
 
-#mars-photos img {
-  width: 40%;
+@media screen and (max-width: 880px){
+	
+	#mars-photos{
+		margin-top: 10px;
+		position: static;
+	}
+	#information{
+		position: static;
+		float: none;
+		margin: auto;
+		width: 80%;
+	}
+	#constellation{
+		width: 80%;
+		margin: auto;
+	}
 }

@@ -6,7 +6,7 @@ const signs = {
     "representation" : "The Goat",
     "perfect match" : "Virgo",
     "imperfect match" : "Gemini",
-    "professional" : "Capricorns are serious, pragmatic, and organized - but definitely not boring. You have the charisma and enthusiasm to lead a team. You're not intimidated or annoyed by authority — you know that with hard work, ambition, and commitment, you too can be at the top.",
+    "professional" : "Capricorns are serious, pragmatic, and organized - but definitely not boring. You have the charisma and enthusiasm to lead a team. You're not intimidated or annoyed by authority - you know that with hard work, ambition, and commitment, you too can be at the top.",
     "career path" : "Capricorns run a tight ship, so they're great at being a manager or administrator for a number of career paths or companies. Your production and administrative skills are some of the best, and you work well in corporate environments with set hierarchies that let you achieve the next rung on the ladder. You also make great engineers, architects, and design-adjacent employees, as you're one for details."
   },
   "aquarius":  {
